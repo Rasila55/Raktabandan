@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="navbar.component.css">
+
+<nav   style="background-color: #7c0606; color: #000;"class="navbar navbar-expand-lg navbar-dark  px-4  ">
+    <a class="navbar-brand fw-bold" routerLink="/">🩸 Raktabandan</a>
+  
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+  
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/find-donor">Find Donors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/become-donor">Become Donor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/request-blood">Request Blood</a>
+        </li>
+      </ul>
+    <!-- show these if not logged in  -->
+      <ul class="navbar-nav ">
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li> 
+        <!-- show if logged in  -->
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/profile">Profile</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
