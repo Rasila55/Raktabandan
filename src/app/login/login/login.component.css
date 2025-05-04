@@ -1,0 +1,61 @@
+.auth-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .auth-form {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .auth-form h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .auth-form label {
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .forgot {
+    color: #a94442;
+    text-decoration: none;
+    margin: 10px 0 20px;
+    font-size: 0.9rem;
+  }
+  
+  .login-btn {
+    padding: 12px;
+    background: linear-gradient(to right, #8e2de2, #e94057);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-branding {
+    flex: 1;
+    background-color: #992533;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .auth-branding img {
+    width: 60%;
+  }
+  
