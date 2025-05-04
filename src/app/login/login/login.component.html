@@ -1,1 +1,7 @@
-<p>login works!</p>
+<main>
+    <p>Template Driven Form</p>
+    <form
+      class="contact-form"
+      #contactForm="ngForm"
+      (ngSubmit)="onSubmit(contactForm)"
+    >

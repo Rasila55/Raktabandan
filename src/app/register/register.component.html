@@ -1,1 +1,83 @@
-<p>register works!</p>
+<div class="container mt-5">
+    <h2>Donor Registration Form</h2>
+    <form (ngSubmit)="onSubmit()" #donorForm="ngForm">
+  
+      <!-- Name Fields -->
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label>First Name*</label>
+          <input type="text" class="form-control" required [(ngModel)]="donor.firstName" name="firstName">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>Middle Name</label>
+          <input type="text" class="form-control" [(ngModel)]="donor.middleName" name="middleName">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>Last Name*</label>
+          <input type="text" class="form-control" required [(ngModel)]="donor.lastName" name="lastName">
+        </div>
+      </div>
+  
+      <!-- Gender and DOB -->
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label>Gender*</label>
+          <select class="form-select" required [(ngModel)]="donor.gender" name="gender">
+            <option value="" disabled selected>Select Gender</option>
+            <option *ngFor="let g of genders" [value]="g">{{ g }}</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Date of Birth*</label>
+          <input type="date" class="form-control" required [(ngModel)]="donor.dob" name="dob">
+        </div>
+      </div>
+  
+      <!-- Contact -->
+      <div class="mb-3">
+        <label>Contact*</label>
+        <input type="text" class="form-control" required [(ngModel)]="donor.contact" name="contact">
+      </div>
+  
+      <!-- Location -->
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label>District*</label>
+          <select class="form-select" required [(ngModel)]="donor.district" name="district">
+            <option value="" disabled selected>Choose District</option>
+            <option *ngFor="let d of districts" [value]="d">{{ d }}</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>VDC/Municipality*</label>
+          <select class="form-select" required [(ngModel)]="donor.vdc" name="vdc">
+            <option value="" disabled selected>Select VDC/Municipality</option>
+            <option *ngFor="let v of vdcs" [value]="v">{{ v }}</option>
+          </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label>Ward No.*</label>
+          <input type="number" class="form-control" required [(ngModel)]="donor.wardNo" name="wardNo">
+        </div>
+      </div>
+  
+      <!-- Location Text -->
+      <div class="mb-3">
+        <label>Location</label>
+        <input type="text" class="form-control" [(ngModel)]="donor.location" name="location">
+      </div>
+  
+      <!-- Blood Group -->
+      <div class="mb-3">
+        <label>Blood Group*</label>
+        <select class="form-select" required [(ngModel)]="donor.bloodGroup" name="bloodGroup">
+          <option value="" disabled selected>Blood Group</option>
+          <option *ngFor="let group of bloodGroups" [value]="group">{{ group }}</option>
+        </select>
+      </div>
+  
+      <!-- Submit -->
+      <button type="submit" class="btn btn-success" [disabled]="donorForm.invalid">Register</button>
+    </form>
+  </div>
+  
