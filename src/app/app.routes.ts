@@ -12,7 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 export const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'login',component:LoginComponent},
-    {path:'register',component:RegisterComponent},
+    { path: 'register', loadComponent: () => import('./register/register.component').then(m => m.RegisterComponent) },
     {path:'profile',component:ProfileComponent},
     {path:'become-donor',component:BecomeDonorComponent},
     {path:'request-blood',component:RequestBloodComponent},
